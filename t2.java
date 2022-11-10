@@ -1,9 +1,6 @@
 import org.xml.sax.helpers.AttributeListImpl;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Locale;
+import java.util.*;
 
 public class t2 {
 
@@ -209,14 +206,31 @@ public class t2 {
         ArrayList<String> shorter = arrstr1;
         if(shorter.size()>arrstr2.size()) shorter = arrstr2;
 
+        ArrayList<String> empty = null;
+                
         for(int i:min)
         {
             //System.out.println(i);
             if(i%2==0) map.put(i,shorter);
-            if(i>10&&i<30) map.put(i,longer);
+            else if(i>10&&i<30) map.put(i,longer);
+            else map.put(i,empty);
         }
         System.out.println("ex4:");
-        System.out.println(map);
-        
+        //System.out.println(map);
+        int o=0;
+        for(Map.Entry<Integer, ArrayList<String>> entry :map.entrySet())
+        {
+
+            if (entry.getValue() != null)
+            {
+                for(int i=0;i< entry.getValue().size(); i++){
+                    System.out.println("This is value for [" + entry.getKey() + "] and position [" + i +"]:" + entry.getValue().get(i));
+
+                }
+            }else{System.out.println("This is value for [" + entry.getKey() + "] and position [" + 0 +"]:" + entry.getValue());}
+
+
+
+        }
      }
 }
