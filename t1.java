@@ -32,7 +32,7 @@ public class t1 {
     public static void main(String[] args) {
 
         //ex1 ###########################################
-        int a = 5, b = 5 , c = 7 ;
+        int a = 5, b = 5 , c = 17 ;
 
         switch (number_of_5(a,b,c))
         {
@@ -65,7 +65,7 @@ public class t1 {
 
         //ex2 #####################################
 
-        int d = 1;
+        int d = 2;
 
             switch (d)
             {
@@ -80,14 +80,14 @@ public class t1 {
                     break;
                 case 365:
                     System.out.println("val is 365");
-                    break;
+
 
             }
 
 
             //ex3 ##########################################
 
-        boolean bool = false;
+        boolean bool = true;
             if(bool)
             {
                 a+=20;
@@ -117,7 +117,7 @@ public class t1 {
 
 
             String w1 = "wor";
-            String w2 ="";
+            String w2 ="oord";
             char c1 = 'w';
             int len = w1.length();
             if(!check_str(w1,c1) && len>3)
